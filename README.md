@@ -5,7 +5,7 @@ This lab uses **Snorkel** to build a training set for classifying YouTube commen
 **Author:** Ayush Varma ([@ayushvarma7](https://github.com/ayushvarma7))
 **Repository:** [github.com/ayushvarma7/youtube_spam_labeling_and_classification](https://github.com/ayushvarma7/youtube_spam_labeling_and_classification)
 
-Based on the Snorkel spam tutorials (`01_spam_tutorial.ipynb`)
+Based on the Snorkel spam tutorials (`reference/01_spam_tutorial.ipynb`)
 
 ---
 
@@ -54,7 +54,7 @@ flowchart LR
 
 ## 2. Changes I made compared to the original lab
 
-The original `01_spam_tutorial.ipynb` is kept in this repo for reference. My work is in `spam_tutorial.ipynb`.
+My work is in `spam_tutorial.ipynb` at the top level. The three original notebooks are kept in `reference/` for comparison.
 
 ### Summary table
 
@@ -223,15 +223,18 @@ Select the `youtube-spam (venv)` kernel and run all cells from the top. Run it f
 
 ```
 youtube_spam_labeling_and_classification/
-├── spam_tutorial.ipynb                         # my notebook
-├── 01_spam_tutorial.ipynb                      # original: labeling functions
-├── 02_spam_data_augmentation_tutorial.ipynb    # original: transformation functions
-├── 03_spam_data_slicing_tutorial.ipynb         # original: slicing functions
-├── utils.py                                    # dataset loader and helpers from the original lab
-├── data/                                       # five TubeSpam CSV files
-├── images/                                     # charts used in this README
+├── spam_tutorial.ipynb                             # my notebook
+├── reference/                                      # original lab notebooks, unchanged
+│   ├── 01_spam_tutorial.ipynb                      # labeling functions
+│   ├── 02_spam_data_augmentation_tutorial.ipynb    # transformation functions
+│   └── 03_spam_data_slicing_tutorial.ipynb         # slicing functions
+├── utils.py                                        # dataset loader and helpers from the original lab
+├── data/                                           # five TubeSpam CSV files
+├── images/                                         # charts used in this README
 └── requirements.txt
 ```
+
+The notebooks in `reference/` import `utils.py` and read `data/` with relative paths. To rerun one, copy it to the top level first.
 
 ---
 
